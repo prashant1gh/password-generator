@@ -1,6 +1,9 @@
 .form_header {
-    text-align: center;
     font-size: 1.5rem;
+}
+
+.form_header span {
+    width: 80%;
 }
 
 .container {
