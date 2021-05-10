@@ -63,7 +63,8 @@ body {
     font-size: 1.2rem;
     border-radius: 4px;
     border: 2px solid #424242;
-    background: #212121;
+    /* background: #212121; */
+    background: transparent;
     color: #dadada;
     outline: none;
 }
@@ -104,7 +105,8 @@ body {
     font-size: 1.4rem;
     text-align: center;
     font-family: monospace;
-    background: #212121;
+    /* background: #212121; */
+    background: transparent;
     color: #dadada;
 }
 
@@ -176,4 +178,15 @@ input:checked+.slider-toggle:before {
 
 .slider-toggle.round:before {
     border-radius: 50%;
+}
+
+
+/* night mode button */
+
+#night_mode {
+    background: url(./images/sun.png) no-repeat;
+    height: 45px;
+    width: 45px;
+    border: none;
+    cursor: pointer;
 }

@@ -1,3 +1,8 @@
+        window.onload = function() {
+
+        };
+
+
         const lowercase = 'abcdefghijklmnopqrstuvwxyz';
         const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         const digits = '0123456789';
@@ -56,7 +61,6 @@
             }
             generate_password(sliderValue, char_domain);
 
-            // console.log(char_domain);
         }
 
         uppercase_check.onchange = function() {
@@ -74,7 +78,6 @@
             }
             generate_password(sliderValue, char_domain);
 
-            console.log(char_domain);
         }
 
         numbers_check.onchange = function() {
@@ -108,7 +111,6 @@
             }
             generate_password(sliderValue, char_domain);
 
-            console.log(char_domain);
         }
 
         // character domain selection end
@@ -118,7 +120,7 @@
         resultSection.style.display = 'none';
 
 
-        generate_password_button.addEventListener('click', function() {
+        generate_password_button.addEventListener('click', function(event) {
             event.preventDefault();
             generate_password(sliderValue, char_domain);
             resultSection.style.display = 'block';
@@ -162,3 +164,26 @@
 
             return password
         }
+
+        var toggle_night_mode = document.getElementById('night_mode');
+        var night_mode = true;
+        toggle_night_mode.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (night_mode) {
+                document.getElementsByTagName('body')[0].style.backgroundColor = "#fff";
+                document.getElementsByTagName('body')[0].style.color = "#000";
+                document.getElementById('password_result').style.color = "#000"
+                document.getElementById('slider_meter').style.color = "#000"
+                document.getElementById('night_mode').style.background = "url(./images/moon.png) no-repeat";
+
+                night_mode = false;
+            } else {
+                document.getElementsByTagName('body')[0].style.backgroundColor = "#212121";
+                document.getElementsByTagName('body')[0].style.color = "#dadada";
+                document.getElementById('password_result').style.color = "#dadada"
+                document.getElementById('slider_meter').style.color = "#dadada"
+                document.getElementById('night_mode').style.background = "url(./images/sun.png) no-repeat";
+
+                night_mode = true;
+            }
+        });
