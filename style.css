@@ -6,6 +6,7 @@
 .container {
     margin: 0 auto;
     display: block;
+    max-width: 1000px;
 }
 
 .form_header {
@@ -189,4 +190,30 @@ input:checked+.slider-toggle:before {
     width: 45px;
     border: none;
     cursor: pointer;
+}
+
+#night_mode {
+    background: url(./images/sun.png) no-repeat;
+    height: 45px;
+    width: 45px;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 576px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 60%;
+    }
 }
