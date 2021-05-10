@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <form class="container">
+        <div class="form_header flex_container">
+
+            <span>
+                Password Generator
+            </span>
+            <button>night view</button>
+        </div>
+
+        <div class="form_row flex_container">
+            <span class="form_label">
+
+                length
+            </span>
+            <input id="slider" type="range" min="4" max="20" value="8" class="slider" id="myRange">
+            <input id="slider_meter" type="text" class="textbox">
+        </div>
+
+
+        <div class="form_row flex_container">
+            <span class="form_label">
+
+                Lowercase Letters
+            </span>
+
+            <label class="switch">
+                <input id="lowercase_check" class="toggle" type="checkbox">
+                <span class="slider-toggle round"></span>
+              </label>
+        </div>
+
+        <div class="form_row flex_container">
+            <span class="form_label">
+
+                Uppercase Letters
+            </span>
+
+            <label class="switch">
+                <input id="uppercase_check" class="toggle" type="checkbox">
+                <span class="slider-toggle round"></span>
+              </label>
+        </div>
+        <div class="form_row flex_container">
+            <span class="form_label">
+
+                Numbers
+            </span>
+            <label class="switch">
+                <input id="numbers_check" class="toggle" type="checkbox">
+                <span class="slider-toggle round"></span>
+              </label>
+        </div>
+        <div class="form_row flex_container">
+            <span class="form_label">
+
+                Symbols
+            </span>
+            <label class="switch">
+                <input id="symbols_check" class="toggle" type="checkbox">
+                <span class="slider-toggle round"></span>
+              </label>
+        </div>
+
+        <button id="generate_password">Generate</button>
+
+        <div id="result_container" class="result_container">
+            <input id="password_result" type="text">
+            <button id="copy-button" class="copybtn">Copy</button>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
